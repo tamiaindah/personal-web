@@ -1,0 +1,530 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* atur logonya */
+img .logo {
+  width: 70px;
+  height: 30px;
+}
+
+
+#row {
+  width: 100%;
+}
+
+/* atur navbar */
+#navbar {
+  width: 100%;
+}
+
+/* atur section about */
+#about {
+  list-style: none;
+  padding-bottom: 25px;
+}
+
+/* atur section skill */
+#skills {
+  background-color: #e2edff;
+  padding-bottom: 25px;
+}
+
+/* atur section tools */
+#tools {
+  background-color: #fcfcfc;
+  padding-bottom: 25px;
+}
+
+/* atur section experience */
+#experience {
+  background-color: #e2edff;
+  padding-bottom: 25px;
+}
+
+/* atur section education */
+#education {
+  background-color: #fcfcfc;
+  padding-bottom: 25px;
+}
+
+/* atur section contact */
+#contact {
+  background-color: #fcfcfc;
+  padding-bottom: 25px;
+}
+
+/* atur section project */
+#projects {
+  background-color: #e2edff;
+  padding-bottom: 25px;
+}
+
+#projects .container .row {
+  padding-bottom: 10px;
+}
+/* bagian chat widget */
+#myForm {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 12%;
+  padding: 0;
+  right: 2%;
+  background-color: #F3F6F9;
+}
+
+.bg-primary {
+  background-color: #1976d2 !important;
+}
+
+.jumbotron {
+  background-image: url(img/scott-graham-5fNmWej4tAA-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 -170px;
+  height: 420px;
+  padding-top: 90px;
+}
+
+/* box shadow bagian foto profile */
+.img-thumbnail {
+  box-shadow: 1px 1px 10px rgba(25, 118, 210, 0.5);
+}
+
+.display-4 {
+  font-size: 53px;
+  font-weight: 400;
+  padding-top: 15px;
+  text-shadow: 1px 1px 10px rgba(25, 118, 210, 0.25);
+  margin-bottom: 0.2rem;
+}
+
+.lead {
+  font-weight: 500;
+  text-shadow: 1px 1px 10px rgba(25, 118, 210, 0.25);
+}
+
+/* atur container about */
+.about .container,
+#projects .container,
+#contact .container,
+#skills .container,
+#tools .container {
+  margin-bottom: 15px;
+  width: 100%;  
+}
+
+/* Navbar nya */
+.bar {
+  background: #90cbe5;
+  width: 90%;
+  display: block;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar span {
+  height: 5px;
+  float: center;
+  background-color: #2196f3;
+}
+
+.as {
+  width: 75%;
+}
+
+.fe {
+  width: 80%;
+}
+
+.be {
+  width: 50%;
+}
+
+/* Buat slide bagian skill */
+
+.slick-slide {
+  margin: 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+  display: flex;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* image hover overlay untuk my project */
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.image__img {
+  display: flexbox;
+  width: 100%;
+
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+  background: #2196f3;
+}
+
+.image__overlay>* {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image__overlay:hover>* {
+  transform: translateY(0);
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Button buat open chat widgetnya */
+.open-button {
+  background-color: #4A87E2;
+  color: white;
+  cursor: pointer;
+  border: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40%;
+  border-radius: 5%;
+  background-color: #65DB5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-admin {
+  position: fixed;
+  bottom: 12%;
+  padding: 0;
+  right: 3%;
+  background-color: #F3F6F9;
+}
+
+/* popup chat widget nya */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  width: 100%;
+}
+
+.head-container {
+  border-bottom: 1px solid #E2E3E4;
+  text-align: center;
+  height: 10%;
+  position: relative;
+}
+
+.head-container h3 {
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* nambahin styles di container */
+.form-container {
+  width: 100%;
+  background-color: white;
+}
+
+/* textareanya full */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.chat-buble-container {
+  height: 80%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+.chat-buble {
+  margin-bottom: 2%;
+
+  width: 100%;
+}
+
+
+.time-message {
+  margin: 0;
+  margin-top: auto;
+  font-size: 10px;
+}
+
+
+.text-buble {
+  background-color: #F3F6F9;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2%;
+  display: inline-block;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.text-buble-right {
+  min-height: 10%;
+  min-width: none;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2%;
+}
+
+.bottom-container {
+  width: 100%;
+  margin: 0;
+  height: 10%;
+
+}
+
+.c-blue-btn {
+  color: white;
+  background-color: #4A87E2;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+}
+
+.container-chat {
+  overflow-y: scroll;
+}
+
+.dashboard-admin {
+  background-color: white;
+}
+
+.unread {
+  background-color: #F3F6F9;
+}
+
+.input-group .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.input-group .form-control {
+  padding-left: 2.375rem;
+}
+
+.chat {
+  height: 15%;
+  border: 2px solid #F8F8F8;
+}
+
+.text-chat {
+  font-size: 10px;
+}
+
+.drag-area {
+  border: 5px dashed black;
+  background-color: white;
+  display: none;
+  height: 80%;
+}
+
+.drag-area.active {
+  border: 5px solid black;
+}
+
+.drag-area .icon {
+  font-size: 100px;
+}
+
+.drag-area header {
+  font-weight: 500;
+}
+
+.drag-area img {
+  height: 100%;
+}
+
+.drag-area span {
+  font-weight: 500;
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #5256ad;
+  cursor: pointer;
+}
+
+/* Typing Styling */
+
+span.messages__dot {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9e9ea1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: 1s blink infinite;
+  font-size: 12px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bulge {
+  50% {
+    transform: scale(1.05);
+  }
+}
